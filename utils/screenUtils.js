@@ -8,7 +8,9 @@ import EmptyScreen from "../components/EmptyScreen";
 export const IMPLEMENTED_SCREENS = {
   // Auth screens
   Login: true,
-
+  Register: true,
+  ForgotPassword: true,
+  VerifyCode: true,
   // User screens
   // Home: true,
   // BooksList: true,

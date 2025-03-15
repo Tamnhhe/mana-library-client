@@ -17,16 +17,14 @@ const SplashScreen = ({ navigation }) => {
           color="#8A2BE2"
         />
       </View>
-
       <View style={styles.content}>
-        <Text style={styles.tagline}>Knowledge is power! 📚✨</Text>
+        <Text style={styles.tagline}>Knowledge is  power! 📚✨</Text>
       </View>
-
       <View style={styles.buttonContainer}>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Login")}
-          style={styles.getStartedButtonContainer}
-        >
+  onPress={() => navigation.navigate("Auth", { screen: "Register" })}
+  style={styles.getStartedButtonContainer}
+>
           <LinearGradient
             colors={["#4568DC", "#B06AB3"]}
             start={{ x: 0, y: 0 }}

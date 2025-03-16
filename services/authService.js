@@ -27,6 +27,7 @@ const authService = {
 
   // Create new user account
   register: async (userData) => {
+    console.log("Đã sử dụng hàm register");
     try {
       const response = await api.post("/api/v1/auth/register", userData);
       return response.data;

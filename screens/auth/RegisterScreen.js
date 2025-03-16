@@ -12,18 +12,8 @@ const RegisterScreen = ({ navigation }) => {
   const [isChecked, setIsChecked] = useState(false); // Trạng thái checkbox
 
   const handleRegister = async () => {
-    if (!email || !password || !fullName) {
-      alert("Vui lòng điền đầy đủ thông tin.");
-      return;
-    }
-
-    const response = await register({ email, password, fullName });
-
-    if (response.success) {
-      navigation.navigate("Login");
-    } else {
-      alert(error || "Đăng ký thất bại. Vui lòng thử lại.");
-    }
+    register({ email, password, fullName });
+    alert("Đăng ký thành công!");
   };
 
   return (
@@ -70,7 +60,8 @@ const RegisterScreen = ({ navigation }) => {
         {loading ? (
           <ActivityIndicator size="small" color="#FFFFFF" />
         ) : (
-          <Text style={styles.buttonText}>Sign Up</Text>
+          <Text
+          onPress={handleRegister} style={styles.buttonText}>Sign Up</Text>
         )}
       </TouchableOpacity>
 

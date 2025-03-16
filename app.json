@@ -25,7 +25,7 @@
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "serverUrl": "http://localhost:3000"
+      "serverUrl": "http://localhost:8000"
     }
   }
 }

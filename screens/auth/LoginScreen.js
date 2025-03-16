@@ -8,18 +8,8 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
-    if (!email || !password) {
-      alert("Vui lòng điền đầy đủ thông tin.");
-      return;
-    }
-
-    const response = await login({ email, password });
-
-    if (response.success) {
-      navigation.navigate("Home");
-    } else {
-      alert(error || "Đăng nhập thất bại. Vui lòng thử lại.");
-    }
+    login({ email, password });
+    navigation.navigate("VerifyCode");
   };
 
   return (
@@ -48,6 +38,7 @@ const LoginScreen = ({ navigation }) => {
         style={styles.button}
       >
         <Text style={styles.buttonText}>Login</Text>
+
       </TouchableOpacity>
 
       {error && <Text style={styles.errorText}>{error}</Text>}

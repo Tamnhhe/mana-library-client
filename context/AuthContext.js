@@ -77,7 +77,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const register = useCallback(async (userData) => {
-    console.log("Đã sử dụng hàm register");
+    
     try {
       setLoading(true);
       setError(null);
